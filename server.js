@@ -4,7 +4,7 @@ const axios = require("axios").default;
 // Configuración al servidor
 const app = require("express")(); // Al poner esto aqui indicamos que express ya se esta ejecutando
 const http = require("http").Server(app);
-const port = 3000;
+const port = process.env.PORT || 3000;
 const io = require("socket.io")(http, {
   cors: {
     origin: true,
